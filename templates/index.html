@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Face Mask Detection</title>
+
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- ==========================================
+             HEADER
+        =========================================== -->
+
+        <header>
+
+            <h1>
+                Face Mask Detection
+            </h1>
+
+            <p>
+                Live Camera Face Mask Detection
+            </p>
+
+        </header>
+
+
+        <!-- ==========================================
+             LIVE STATUS
+        =========================================== -->
+
+        <div class="live-status">
+
+            <span class="live-dot"></span>
+
+            LIVE CAMERA
+
+        </div>
+
+
+        <!-- ==========================================
+             CAMERA
+        =========================================== -->
+
+        <div class="camera-card">
+
+            <img
+                src="{{ url_for('video_feed') }}"
+                class="camera-feed"
+                alt="Live Camera"
+            >
+
+        </div>
+
+
+        <!-- ==========================================
+             INFORMATION
+        =========================================== -->
+
+        <div class="info-card">
+
+            <h2>
+                Detection Information
+            </h2>
+
+
+            <div class="info-item">
+
+                <span class="green-box"></span>
+
+                <span>
+                    Green = Mask Detected
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span class="red-box"></span>
+
+                <span>
+                    Red = No Mask
+                </span>
+
+            </div>
+
+
+            <div class="warning">
+
+                🔊 If no mask is detected:
+
+                <strong>
+                    PLEASE WEAR A MASK
+                </strong>
+
+                <br>
+
+                The system will also beep.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0f2fe,
+            #f8fafc
+        );
+
+    min-height: 100vh;
+
+    color: #111827;
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 95%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 30px 0 50px;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+header h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+}
+
+
+header p {
+
+    font-size: 18px;
+
+    color: #64748b;
+
+}
+
+
+/* =====================================================
+   LIVE STATUS
+===================================================== */
+
+.live-status {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+}
+
+
+.live-dot {
+
+    width: 13px;
+
+    height: 13px;
+
+    background: red;
+
+    border-radius: 50%;
+
+    animation: blink 1s infinite;
+
+}
+
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =====================================================
+   CAMERA CARD
+===================================================== */
+
+.camera-card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 6px;
+
+    background: black;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =====================================================
+   CAMERA
+===================================================== */
+
+.camera-feed {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   INFORMATION CARD
+===================================================== */
+
+.info-card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 25px auto 0;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.info-card h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   INFORMATION ITEMS
+===================================================== */
+
+.info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 12px 0;
+
+    font-size: 17px;
+
+}
+
+
+.green-box {
+
+    width: 18px;
+
+    height: 18px;
+
+    background: #00cc44;
+
+    border-radius: 4px;
+
+}
+
+
+.red-box {
+
+    width: 18px;
+
+    height: 18px;
+
+    background: red;
+
+    border-radius: 4px;
+
+}
+
+
+/* =====================================================
+   WARNING
+===================================================== */
+
+.warning {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #fff1f2;
+
+    border-left: 5px solid red;
+
+    border-radius: 8px;
+
+    line-height: 1.7;
+
+}
+
+
+.warning strong {
+
+    color: red;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    .container {
+
+        width: 94%;
+
+        padding-top: 20px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    header p {
+
+        font-size: 15px;
+
+    }
+
+
+    .camera-feed {
+
+        min-height: 250px;
+
+    }
+
+
+    .info-card {
+
+        padding: 18px;
+
+    }
+
+}
